@@ -6,11 +6,8 @@ const Navbar = () => {
     return (
         <Menu inverted>
             <Container>
-                <Link to="/">
-                    <Menu.Item name='star wars API' />
-                </Link>
-                <Link to="/people"> 
-                    <Menu.Item name='people' />
+                <Link to="/about"> 
+                    <Menu.Item name='about' />
                 </Link>
                 <Link to="/movies">
                     <Menu.Item name='movies' />

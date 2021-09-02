@@ -2,11 +2,12 @@ import React from 'react'
 import { Card, Grid } from 'semantic-ui-react'
 
 const People = ({data}) => {
+    console.log('people', data)
     return (
         <>
             <h1>People</h1>
             <Grid columns={3}>
-                {data.map((people, i) => {
+                {data && data.map((people, i) => {
                     return (
                         <Grid.Column key={i}>
                             <Card>
