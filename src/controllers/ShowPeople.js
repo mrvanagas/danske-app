@@ -19,13 +19,11 @@ function getStarWarsPeople(progress, url = 'https://swapi.dev/api/people/', peop
 }
 
 function progressCallback(people) {
-  // render progress
   console.log(`${people.length} loaded`);
 }
 
 getStarWarsPeople(progressCallback)
   .then(people => {
-    // all planets have been loaded
     console.log(people.map(p => p.name))
   })
   .catch(console.error);

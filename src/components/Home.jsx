@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div>
+        <div data-testid="home-1">
             Home
         </div>
     )
