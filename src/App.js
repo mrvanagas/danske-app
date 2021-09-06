@@ -14,24 +14,17 @@ import './App.css';
 
 function App() {
   const [people, setPeople] = useState(null);
-  const [movies, setMovies] = useState([fakedata[0]]);
+  const [movies, setMovies] = useState(null);
 
-  // useEffect(() => {
-  //   async function fetchPeople() {
-  //     let res = await fetch('https://swapi.dev/api/people/');
-  //     let data = await res.json();
-  //     setPeople(data.results);
-  //   }
+  useEffect(() => {
+    async function fetchMovies() {
+      let res = await fetch('https://swapi.dev/api/films/');
+      let data = await res.json();
+      setMovies(data.results)
+    }
 
-  //   async function fetchMovies() {
-  //     let res = await fetch('https://swapi.dev/api/films/');
-  //     let data = await res.json();
-  //     setMovies(data.results)
-  //   }
-
-  //   // fetchPeople();
-  //   fetchMovies();
-  // }, [])
+    fetchMovies();
+  }, [])
  
   console.log('render')
 
