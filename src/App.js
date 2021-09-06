@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import { Container } from 'semantic-ui-react';
-import fakedata from './fakedata.json'
+import { Container, Segment } from 'semantic-ui-react';
 
 
 import Navbar from './components/Navbar';
@@ -43,12 +42,16 @@ function App() {
               <About />
             </Route>
             <Route exact path='/movies'>
-              <Container>
-                <Movies data={movies} setPeople={setPeople}/>
-              </Container>
-              <Container>
-                { people && <People data={people}/>}
-              </Container>
+              <Segment>
+                <Container>
+                    <Movies data={movies} setPeople={setPeople}/>
+                </Container>
+              </Segment>
+              <Segment>
+                <Container>
+                  { people && <People data={people}/>}
+                </Container>
+              </Segment>
             </Route>
           </Switch>
         </Container>

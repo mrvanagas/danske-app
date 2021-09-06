@@ -2,6 +2,7 @@ function getStarWarsPeople(progress, url = 'https://swapi.dev/api/people/', peop
   return new Promise((resolve, reject) => fetch(url)
     .then(response => {
         if (response.status !== 200)  {
+          // eslint-disable-next-line no-throw-literal
           throw `${response.status}: ${response.statusText}`;
         }
         response.json().then(data => { 
