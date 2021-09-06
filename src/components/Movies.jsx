@@ -1,7 +1,10 @@
 import React from 'react'
 import { Card, Grid, Button } from 'semantic-ui-react'
 import {showPeople} from '../controllers/ShowPeople'
+
+
 // import fakedata from '../fakedata.json'
+
 
 
 const Movies = ({data, setPeople}) => {
