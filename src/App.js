@@ -25,7 +25,6 @@ function App() {
     fetchMovies();
   }, [])
  
-  console.log('render')
 
 
   return (
